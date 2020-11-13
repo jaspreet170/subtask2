@@ -1,4 +1,4 @@
-//Java Program to find square, square root and cube of a integer by Jaspreet//
+//Java Program to find Power, modulo, and square/cube roots of a integer by Jaspreet//
 import java.util.Scanner;
 public class power_square_cube {
 	public static void main(String args[]) {
