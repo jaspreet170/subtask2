@@ -1,26 +1,58 @@
 //Java Program to find square, square root and cube of a integer by Jaspreet//
 import java.util.Scanner;
 public class power_square_cube {
- public static void main(String args[]) {
-	 Scanner sc= new Scanner(System.in); 
+	public static void main(String args[]) {
+		Scanner ab = new Scanner(System.in);
+		
+		System.out.println("Power, modulo, and square/cube roots calculator");
+		
+		System.out.println("\nHere are your options: ");
+		System.out.println("1. Power");
+		System.out.println("2. modulo");
+		System.out.println("3. square/cube roots");
+		
+		System.out.println("What would you like to do? ");
+		int choice = ab.nextInt();
+		System.out.println();
+		{
+		switch (choice) {
+		case 1:
+			power();
+			Scanner sc = new Scanner(System.in);
+		      System.out.println("Enter the base number: ");
+		      int base = sc.nextInt();
+		      int temp = base;
+		      System.out.println("Enter the exponent number: ");
+		      int exp = sc.nextInt();
+
+		      for (int i=1; i<exp; i++){
+		         temp = temp*temp;
+		      }
+		      System.out.println("Result of "+base+" power "+exp+" is "+temp);
+		}}
+		
+		switch(choice) {
+		case 3:
+			 sqrcuberoots(""); }
+	 Scanner sc2= new Scanner(System.in); 
 	 System.out.print("Enter number: ");
-	 int num= sc.nextInt();
+	 int num= sc2.nextInt();
 	 
      System.out.println("Square of " + num + " is: " + Math.pow(num, 2));
      System.out.println("Cube of " + num + " is: " + Math.pow(num, 3));
      System.out.println("Square Root of " + num + " is: " + Math.sqrt(num));
- 
- 
-      Scanner sc2 = new Scanner(System.in);
-      System.out.println("Enter the base number: ");
-      int base = sc.nextInt();
-      int temp = base;
-      System.out.println("Enter the exponent number: ");
-      int exp = sc.nextInt();
+			}private static void sqrcuberoots(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 
-      for (int i=1; i<exp; i++){
-         temp = temp*temp;
-      }
-      System.out.println("Result of "+base+" power "+exp+" is "+temp);
-   }
-}
+
+	private static String sqrcuberoots() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static void power() {
+		// TODO Auto-generated method stub
+		
+	}
