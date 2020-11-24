@@ -1,58 +1,65 @@
-//Java Program to find Power, modulo, and square/cube roots of a integer by Jaspreet//
-import java.util.Scanner;
+//Java Program for Power, modulo, and square/cube roots by Jaspreet//
+import java.util.Scanner;					//allows user to input
 public class power_square_cube {
 	public static void main(String args[]) {
-		Scanner ab = new Scanner(System.in);
 		
 		System.out.println("Power, modulo, and square/cube roots calculator");
 		
-		System.out.println("\nHere are your options: ");
+		System.out.println("\nHere are your options: ");		//list of options for the user
 		System.out.println("1. Power");
-		System.out.println("2. modulo");
-		System.out.println("3. square/cube roots");
+		System.out.println("2. Modulo");
+		System.out.println("3. Square/cube roots");
 		
 		System.out.println("What would you like to do? ");
-		int choice = ab.nextInt();
-		System.out.println();
-		{
+		Scanner ab = new Scanner(System.in);
+		int choice = ab.nextInt();						//user inputs 1, 2 or 3 anything else displays error
 		switch (choice) {
 		case 1:
 			power();
-			Scanner sc = new Scanner(System.in);
-		      System.out.println("Enter the base number: ");
-		      int base = sc.nextInt();
-		      int temp = base;
-		      System.out.println("Enter the exponent number: ");
-		      int exp = sc.nextInt();
-
-		      for (int i=1; i<exp; i++){
-		         temp = temp*temp;
-		      }
-		      System.out.println("Result of "+base+" power "+exp+" is "+temp);
-		}}
-		
-		switch(choice) {
+		      break;
+		case 2:
+			modulo();
+			break;
 		case 3:
-			 sqrcuberoots(""); }
-	 Scanner sc2= new Scanner(System.in); 
-	 System.out.print("Enter number: ");
-	 int num= sc2.nextInt();
-	 
-     System.out.println("Square of " + num + " is: " + Math.pow(num, 2));
-     System.out.println("Cube of " + num + " is: " + Math.pow(num, 3));
-     System.out.println("Square Root of " + num + " is: " + Math.sqrt(num));
-			}private static void sqrcuberoots(String string) {
+			 sqrcuberoots();
+			 break;	} }
+
+	private static void modulo() {
+		Scanner sc3 = new Scanner(System.in);
+		System.out.println("Enter first number: ");
+		double a = sc3.nextDouble();
+		System.out.println("Enter second number: ");
+		double b = sc3.nextDouble();
+		double c = a%b;
+		System.out.println("Result of " + a + " mod " +b+ " is " +c);
+	}
+			
+
+	private static void sqrcuberoots() {
+		Scanner sc2 = new Scanner(System.in);
+		System.out.print("Enter number: ");
+		double num= sc2.nextDouble();
+		System.out.println("Square Root of " + num + " is: " + Math.sqrt(num));
+		System.out.println("Cube Root of " + num + " is: " + Math.cbrt(num));
 		// TODO Auto-generated method stub
-		
 	}
 
-
-	private static String sqrcuberoots() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	private static void power() {
+	Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the base number: ");
+    double base = sc.nextDouble();
+    double temp = base;
+    System.out.println("Enter the exponent number: ");
+    double exp = sc.nextDouble();
+
+    for (double i=1; i<exp; i++){
+       temp = temp*temp;
+    }
+    System.out.println("Result of "+base+" power "+exp+" is "+temp);
 		// TODO Auto-generated method stub
+    
+    
 		
-	}
+	}}
+ 
